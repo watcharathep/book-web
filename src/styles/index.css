@@ -1,0 +1,98 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.ml-auto {
+  margin-left: auto;
+}
+
+.mr-auto {
+  margin-right: auto;
+}
+
+.mt-auto {
+  margin-top: auto;
+}
+
+.mb-auto {
+  margin-bottom: auto;
+}
+
+.mt-10p {
+  margin-top: 10px;
+}
+
+.mb-10p {
+  margin-bottom: 10px;
+}
+
+.ml-10p {
+  margin-left: 10px;
+}
+
+.mr-10p {
+  margin-right: 10px;
+}
+
+.mg-10p {
+  margin: 10px;
+}
+
+.pd-10p {
+  padding: 10px;
+}
+
+.pl-10p {
+  padding-left: 10px;
+}
+
+.pr-10p {
+  padding-right: 10px;
+}
+
+.pt-10p {
+  padding-top: 10px;
+}
+
+.pb-10p {
+  padding-bottom: 10px;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.text-color-main {
+  color: rgba(0, 0, 0, 0.8);
+}
+
+.color-main {
+  color: aqua;
+}
+
+.color-white {
+  color: #fff;
+}
+
+.bg-main {
+  background-color: azure;
+}
+
+.color-error{
+  color: red;
+}
