@@ -1,8 +1,11 @@
+import Layout from "./layout";
 import Router from "./routes/router";
 function App() {
   return (
     <div>
-      <Router />
+      <Layout>
+        <Router />
+      </Layout>
     </div>
   );
 }

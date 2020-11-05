@@ -1,5 +1,7 @@
 import { Redirect, Switch, Route } from "react-router-dom";
 
+import CreateBook from "../pages/book/create";
+
 import { path } from "./constant";
 
 const Router = () => {
@@ -10,7 +12,7 @@ const Router = () => {
         <div>home</div>
       </Route>
       <Route path={path.createBook}>
-        <div>create</div>
+        <CreateBook />
       </Route>
       <Route path={`${path.updateBook}/:bookId`}>
         <div>update</div>
