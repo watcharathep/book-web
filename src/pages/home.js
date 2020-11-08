@@ -23,28 +23,36 @@ const Home = () => {
   };
 
   const handleDeleteBook = async (bookId) => {
-      await BookService.delete(bookId)
-      getBooks()
+    await BookService.delete(bookId);
+    getBooks();
   };
 
   if (isLoading) {
-    return <div className="loader"></div>;
+    return (
+      <div>
+        <h2>หนังสือทั้งหมด</h2>
+        <hr />
+        <div className="text-center d-flex justify-center">
+          <div className="loader"></div>
+        </div>
+      </div>
+    );
   }
   return (
     <div>
       <h2>หนังสือทั้งหมด</h2>
       <hr />
-    <div className="d-flex space-12p flex-wrap justify-center">
-      {books.map((book) => {
-        return (
-          <CardBook
-            key={book.id}
-            book={book}
-            handleDeleteBook={handleDeleteBook}
-          />
-        );
-      })}
-    </div>
+      <div className="d-flex space-12p flex-wrap justify-center">
+        {books.map((book) => {
+          return (
+            <CardBook
+              key={book.id}
+              book={book}
+              handleDeleteBook={handleDeleteBook}
+            />
+          );
+        })}
+      </div>
     </div>
   );
 };

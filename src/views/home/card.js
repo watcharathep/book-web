@@ -1,5 +1,5 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faStar, faEye } from "@fortawesome/free-solid-svg-icons";
+import { faStar } from "@fortawesome/free-solid-svg-icons";
 import {
   faStar as faStarO,
   faEye as faEyeO,
@@ -30,18 +30,18 @@ const CardBook = ({ handleDeleteBook, book }) => {
       <div className="card-body">
         <h3 className="line-clamp-1 mt-10p mb-10p">{book.title}</h3>
         <span className="line-clamp-3">{book.description}</span>
-        <div className="d-flex justify-space-between">
+      </div>
+      <div className="mt-auto pd-12p pt-0p">
+      <div className="d-flex justify-space-between">
           <h5 className="mt-10p mb-10p">
             ราคา <span className="highlight">{book.price} </span>บาท
           </h5>
           <h5 className="mt-10p mb-10p">
-            จำนวนสินค้าที่เหลือ <span className="highlight">{book.stock} </span>{" "}
-            เล่ม
+            เหลือ <span className="highlight">{book.stock} </span> เล่ม
           </h5>
         </div>
         <div className="text-center">
           <Rating
-          
             initialRating={book.rating}
             emptySymbol={
               <FontAwesomeIcon icon={faStarO} size="lg" color="#e6e600" />

@@ -75,6 +75,10 @@ a {
   padding: 10px;
 }
 
+.pd-12p{
+  padding: 12px;
+}
+
 .pl-10p {
   padding-left: 10px;
 }
@@ -85,6 +89,10 @@ a {
 
 .pt-10p {
   padding-top: 10px;
+}
+
+.pt-0p{
+  padding-top: 0px;
 }
 
 .pb-10p {
@@ -198,14 +206,10 @@ form button:hover {
   padding: 40px 20px;
   width: 450px;
   max-width: 100% !important;
-  box-shadow: 0 11px 19px 0 rgba(0, 0, 0, 0.1);
-  /* border: 0.5px solid rgba(211, 206, 206, 0.2); */
+  /* box-shadow: 0 11px 19px 0 rgba(0, 0, 0, 0.1); */
+  border: 0.5px solid rgba(211, 206, 206, 0.2);
 }
 
-.content-center {
-  align-items: center;
-  justify-content: center;
-}
 
 .item-center{
   align-items: center;
