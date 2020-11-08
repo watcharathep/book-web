@@ -1,0 +1,9 @@
+
+.edit-button{
+    background-color: #ffcc00 ;
+    color: #fff;
+    border: 0px;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+}

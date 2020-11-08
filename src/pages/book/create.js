@@ -9,6 +9,7 @@ const createBookSchema = Yup.object().shape({
   description: Yup.string().required("กรุณากรอกรายละเอียด"),
   price: Yup.number().nullable().required("กรุณากรอกราคา"),
   stock: Yup.number().nullable().required("กรุณากรอกจำนวนสินค้า"),
+  imageUrl: Yup.string().required("กรุณากรอกลิ้งค์รูป"),
 });
 
 const CreateBookPage = () => {
@@ -19,6 +20,7 @@ const CreateBookPage = () => {
       description: "",
       price: "",
       stock: "",
+      imageUrl: ""
     },
     onSubmit: (values) => {
       handleSubmit(values);
@@ -31,6 +33,7 @@ const CreateBookPage = () => {
     try {
       const response = await BookService.create(values);
       console.log(response)
+      formik.resetForm()
       alert("สร้างหนังสือสำเร็จ");
     } catch (error) {
       console.log(error);
@@ -86,7 +89,7 @@ const CreateBookPage = () => {
         </div>
         <div className="form-control">
           <label htmlFor="price">
-            <b>รายละเอียดหนังสือ</b>
+            <b>ราคา</b>
           </label>
           <input
             id="price"
@@ -120,6 +123,25 @@ const CreateBookPage = () => {
           />
           {formik.touched.stock && (
             <div className="error">{formik.errors.stock}</div>
+          )}
+        </div>
+        <div className="form-control">
+          <label htmlFor="imageUrl">
+            <b>ลิ้งค์รูปหนังสือ</b>
+          </label>
+          <input
+            id="imageUrl"
+            name="imageUrl"
+            type="text"
+            onChange={formik.handleChange}
+            value={formik.values.imageUrl}
+            onBlur={formik.handleBlur}
+            className={
+              formik.errors.imageUrl && formik.touched.imageUrl ? "border-error" : ""
+            }
+          />
+          {formik.touched.imageUrl && (
+            <div className="error">{formik.errors.imageUrl}</div>
           )}
         </div>
         <button type="submit" className="mt-10p" disabled={isLoading}>

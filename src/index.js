@@ -1,6 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import "./styles/index.css";
+import "./styles/card.css"
 import App from "./app";
 import reportWebVitals from "./report-web-vitals";
 import { BrowserRouter } from "react-router-dom";

@@ -22,7 +22,16 @@ class Book {
     }
   }
 
-  updateDetail() {}
+  async delete(bookId) {
+    try {
+      const response = await axios.delete(`${this.url}/${bookId}`);
+      return response.data;
+    } catch (error) {
+      throw error;
+    }
+  }
+
+  updateDetail(bookId,data) {}
 }
 
 const BookService = new Book();

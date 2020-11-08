@@ -1,6 +1,7 @@
 import { Redirect, Switch, Route } from "react-router-dom";
 
 import CreateBook from "../pages/book/create";
+import Home from "../pages/home";
 
 import { path } from "./constant";
 
@@ -9,7 +10,7 @@ const Router = () => {
     <Switch>
       <Redirect exact path="/" to={path.home} />
       <Route path={path.home}>
-        <div>home</div>
+        <Home />
       </Route>
       <Route path={path.createBook}>
         <CreateBook />
